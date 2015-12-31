@@ -1,0 +1,288 @@
+/* ========== App-wide ========== */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, .container {
+  height: 100%;
+}
+
+body {
+  color: #5C5C5C;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.left-nav, .data-container, .login-container {  
+  /* Vertically centers content */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container {
+  min-height: 540px;
+}
+
+/* ========== Left nav ========== */
+
+.left-nav {
+  float: left;
+  height: 400px;
+  margin-right: 20px; 
+  text-align: right;
+  width: 200px;
+}
+
+.left-nav ul {
+  padding-right: 15%;
+  width: 85%;
+}
+
+.left-nav li {
+  margin-top: 1.5em;
+  position: relative;
+}
+
+.left-nav li:first-child {
+  margin-top: 0;
+}
+
+.left-nav a {
+  color: #1874cd;
+}
+
+.left-nav a:active {
+  font-weight: bold;
+}
+
+.left-nav a:hover {
+  text-decoration: underline;
+}
+
+.arrow {
+  border: 2px solid #1874cd;
+  border-top: none;
+  border-right: none;
+  content: '';
+  height: 0.6em;
+  margin-left: 10%;
+  margin-top: 0.2em;
+  position: absolute;
+  width: 0.6em;
+
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+/* ========== Data table ==========  */
+
+.data-container {
+  height: 500px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  min-width: 200px;
+  overflow: scroll;
+}
+
+.data-container table {
+  border-collapse: collapse;
+  height: 100%;
+  text-align: left;
+  width: 100%;
+}
+
+.data-container th {
+  background-color: #dbdbdb;
+  padding: 2%;
+}
+
+.selected, .data-container tr:nth-child(odd).selected {
+  background: #acaeae;
+}
+
+.data-container tr:nth-child(odd) {
+  background: #f2f2f2;
+}
+
+.data-container tr:hover {
+  background-color: #d4d4d4;
+  cursor: pointer;
+}
+
+.data-container td {
+  font-size: 0.8em;
+  padding: 0 3%;
+}
+
+#A {
+  border-left: 7px solid #5C5C5C;
+}
+
+#A td:nth-child(2) {
+  color: #5C5C5C;
+}
+
+#MX {
+  border-left: 7px solid #1874cd;
+}
+
+#MX td:nth-child(2) {
+  color: #1874cd;
+}
+
+#TXT {
+  border-left: 7px solid #bcee68;
+}
+
+#TXT td:nth-child(2) {
+  color: #bcee68;
+}
+
+#AAAA {
+  border-left: 7px solid #999;
+}
+
+#AAA td:nth-child(2) {
+  color: #999;
+}
+
+#LOC {
+  border-left: 7px solid #00bfff;
+}
+
+#LOC td:nth-child(2) {
+  color: #00bfff;
+}
+
+#SRV {
+  border-left: 7px solid #cd3333;
+}
+
+#SRV td:nth-child(2) {
+  color: #cd3333;
+}
+
+.checkbox {
+  position: relative;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.checkbox label {
+  background: #fff;
+  border: 1px solid #5C5C5C;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 1.2em;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1.2em;
+}
+
+.checkbox label:after {
+  border: 3px solid #5C5C5C;
+  border-top: none;
+  border-right: none;
+  content: '';
+  height: 0.3em;
+  left: 0.1em;
+  opacity: 0;
+  position: absolute;
+  top: 0.2em;
+  width: 0.6em;
+
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.checkbox label:hover::after {
+  opacity: 0.5;
+}
+
+.checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+.value {
+  color: #999;
+}
+
+/* ========== Login ========== */
+
+.login-container {
+  float: right;
+  height: 300px;
+  margin-left: 20px;
+  width: 200px;
+}
+
+.login-container form {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.login label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.login input, .login button {
+  border-radius: 2px;
+  height: 3em;
+}
+
+.login input {
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+
+.email {
+  margin-bottom: 1.5em;
+}
+
+.valid {
+  border: 1px solid #f2f2f2;
+}
+
+.invalid {
+  border: 2px solid red;
+}
+
+.login button {
+  background-color: #1874cd;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  float: right;
+  margin-top: 1.5em;
+  padding: 10px 20px;
+}
+
+button:disabled {
+  background-color: #999;
+}
+
+.login button:hover:enabled {
+  background-color: green;
+}

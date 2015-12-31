@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cloudflare Front-End</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="left-nav">
+        <ul>
+          <li><a href="#">A link <span class="arrow"></span></a></li>
+          <li><a href="#">Active state <span class="arrow"></span></a></li>
+          <li><a href="#">A link <span class="arrow"></span></a></li>
+          <li><a href="#">Another link <span class="arrow"></span></a></li>
+          <li><a href="#">Linky link <span class="arrow"></span></a></li>
+          <li><a href="#">A link <span class="arrow"></span></a></li>
+          <li><a href="#">Hover link <span class="arrow"></span></a></li>
+        </ul>
+      </nav>
+      <div class="login-container">
+        <form class="login">
+          <label>Email</label>
+          <input class="email valid" placeholder="sam@example.com" required>
+          <label>Password</label>
+          <input class="password valid" type="password" required>
+          <button type="submit" class="login-button" disabled>Login</button>
+        </form>
+      </div>
+      <div class="data-container">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Type</th>
+              <th>Name</th>
+              <th>Value</th>
+              <th>TTL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="A">
+              <td>
+                <div class="checkbox">
+                  <input type="checkbox" id="check1">
+                  <label for="check1"></label>
+                </div>
+              </td>
+              <td>A</td>
+              <td>mail</td>
+              <td><span class="value">points to</span> 216.70.64.90</td>
+              <td>15 mins</td>
+            </tr>
+            <tr id="MX">
+              <td>
+                <div class="checkbox">
+                  <input type="checkbox" id="check2">
+                  <label for="check2"></label>
+                </div>
+              </td>
+              <td>MX</td>
+              <td>examplewebsiteone.com</td>
+              <td><span class="value">mail handled by</span> mail.examplewebsiteone.com</td>
+              <td>12 hours</td>
+            </tr>
+            <tr id="TXT">
+              <td>
+                <div class="checkbox">
+                  <input type="checkbox" id="check3">
+                  <label for="check3"></label>
+                </div>
+              </td>
+              <td>TXT</td>
+              <td>lorem ipsum</td>
+              <td>v=spf1 ip4:123.123.123.123 ~all</td>
+              <td>Automatic</td>
+            </tr>
+            <tr id="AAAA">
+              <td>
+                <div class="checkbox">
+                  <input type="checkbox" id="check4">
+                  <label for="check4"></label>
+                </div>
+              </td>
+              <td>AAAA</td>
+              <td>examplewebsiteone.com</td>
+              <td><span class="value">points to</span> 2001:0db8:85a3:0000:0000:8a2e:...</td>
+              <td>Automatic</td>
+            </tr>
+            <tr id="LOC">
+              <td>
+                <div class="checkbox">
+                  <input type="checkbox" id="check5">
+                  <label for="check5"></label>
+                </div>
+              </td>
+              <td>LOC</td>
+              <td>lorem ipsum</td>
+              <td></td>
+              <td>1 day</td>
+            </tr>
+            <tr id="SRV">
+              <td>
+                <div class="checkbox">
+                  <input type="checkbox" id="check">
+                  <label for="check"></label>
+                </div>
+              </td>
+              <td>SRV</td>
+              <td>lorem ipsum</td>
+              <td></td>
+              <td>Automatic</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
